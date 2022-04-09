@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden !important;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body,
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100vw;
+  transition: all 0.5s !important;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav a {
+  cursor: pointer;
+  text-decoration: none;
 }
-
-.App-header {
-  background-color: #282c34;
+#root {
+  max-width: 100vw;
+}
+.dark {
   min-height: 100vh;
+  background: #121212;
+  color: #fefefe;
+  transition: all 0.5s !important;
+}
+.light {
+  min-height: 100vh;
+  background: #fefefe;
+  color: #121212;
+  transition: all 0.5s !important;
+}
+.nav {
+  height: 100px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1em 3em;
+  z-index: 2;
+  transition: all 0.5s !important;
+}
+.logo {
+  height: 4em;
+}
+.nav ul {
+  display: flex;
+  list-style: none;
+}
+.nav ul li {
+  margin: 0 2em;
+  font-weight: 600;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.container h1 {
+  text-align: center;
+  font-size: 3em;
+  margin: 2em 0;
+}
+.container p {
+  font-weight: 600;
+  line-height: 2em;
+  font-size: 1em;
+  margin: 3em 0;
+}
+.dark .nav {
+  background: #121212;
+  color: #fefefe;
+}
+.light .nav a {
+  background: transparent;
+  color: #121212;
+}
+
+.dark .nav a {
+  background: transparent;
+  color: #fefefe;
+}
+.light .nav {
+  background: #fefefe;
+  color: #121212;
+}
+
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./images/2.jpg");
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  max-width: 100%;
+}
+.banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+  color: #fff;
+}
+.banner p {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  color: #fff;
+}
+.footer {
+  height: 5em;
+  font-weight: 600;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  align-items: center;
 }
